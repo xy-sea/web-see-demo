@@ -2,8 +2,7 @@
     <a href="#" target="_blank">
     <img src="https://i.postimg.cc/bN7f4YY3/logo.png" alt="websee-logo" height="80">
     </a>
-    <p>web-see 后台demo</p>
-    <p>主要用来演示错误还原功能，方式包括：定位源码、播放录屏、记录用户行为</p>
+    <p>web-see 后台demo，主要用来演示错误还原功能，方式包括：定位源码、播放录屏、记录用户行为</p>
 </div>
 
 ## 功能
@@ -31,7 +30,9 @@ $ npm install
 ```
 $ npm run start
 ```
+
 浏览器输入 http://localhost:8083
+
 ## 演示
 
 后台页面
