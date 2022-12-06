@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import webSee from 'web-see';
 
 Vue.use(webSee, {
-  dsn: 'http://localhost:8083',
+  dsn: 'http://localhost:8083/reportData',
   apikey: '项目1',
   silentRecordScreen: true,
   userId: '123'
