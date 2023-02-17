@@ -21,6 +21,7 @@ function loadSourceMap(fileName) {
 }
 
 export const findCodeBySourceMap = async ({ fileName, line, column }, callback) => {
+  console.log('fileName', fileName);
   let sourceData = await loadSourceMap(fileName);
   if (!sourceData) return;
   let { sourcesContent, sources } = sourceData;
