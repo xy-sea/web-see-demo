@@ -1,22 +1,16 @@
 <template>
   <div class="home">
-    <el-row>
-      <el-button type="primary" @click="codeErr">js错误</el-button>
-      <el-button type="success" @click="asyncError">异步错误</el-button>
-      <el-button type="danger" @click="promiseErr">promise错误</el-button>
-    </el-row>
-    <el-row>
-      <el-button type="info" @click="xhrError">xhr请求报错</el-button>
-      <el-button type="warning" @click="fetchError">fetch请求报错</el-button>
-    </el-row>
-    <el-row>
-      <el-button type="danger" @click="resourceError">加载资源报错</el-button>
-    </el-row>
+    <el-button type="primary" @click="codeErr">js错误</el-button>
+    <el-button type="success" @click="asyncError">异步错误</el-button>
+    <el-button type="danger" @click="promiseErr">promise错误</el-button>
+    <el-button type="info" @click="xhrError">xhr请求报错</el-button>
+    <el-button type="warning" @click="fetchError">fetch请求报错</el-button>
+    <el-button type="danger" @click="resourceError">加载资源报错</el-button>
     <p class="error">报错统计</p>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column type="index" width="50"></el-table-column>
       <el-table-column prop="message" label="报错信息" width="300"> </el-table-column>
-      <el-table-column prop="page_url" label="报错页面"> </el-table-column>
+      <el-table-column prop="pageUrl" label="报错页面"> </el-table-column>
       <el-table-column prop="time" label="报错时间" width="150">
         <template slot-scope="scope">
           <span>{{ scope.row.time ? format(scope.row.time) : scope.row.date }}</span>
@@ -173,7 +167,7 @@ export default {
         .then((response) => response.json())
         .then((res) => {
           let { code, data } = res;
-          if (code == 200) {
+          if (code == 200 && Array.isArray(data) && data[0] && data[0].events) {
             let events = unzip(data[0].events);
             this.fullscreen = true;
             this.dialogTitle = '播放录屏';
@@ -186,6 +180,12 @@ export default {
                   UNSAFE_replayCanvas: true
                 }
               });
+            });
+          } else {
+            this.$message({
+              message: '暂无数据，请稍后重试~',
+              type: 'warning',
+              duration: 5000
             });
           }
         });

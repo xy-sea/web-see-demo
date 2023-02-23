@@ -11,6 +11,7 @@ Vue.use(webSee, {
   dsn: 'http://localhost:8083/reportData',
   apikey: '项目1',
   silentRecordScreen: true,
+  silentWhiteScreen: true,
   userId: '123'
 });
 Vue.prototype.$echarts = echarts;
