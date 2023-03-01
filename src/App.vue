@@ -1,33 +1,16 @@
 <template>
   <div id="app">
-    <template v-if="showPage">
-      <div class="header">
-        <img class="logo" src="./assets/logo.png" alt="logo" />
-        <span class="title">前端监控</span>
-      </div>
-      <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-      </nav>
-      <router-view />
-    </template>
+    <div class="logoHeader">
+      <img class="logo" src="./assets/logo.png" alt="logo" />
+      <span class="title">前端监控</span>
+    </div>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      showPage: false
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.showPage = true;
-    }, 3000);
-  }
-};
-</script>
-
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,7 +20,7 @@ export default {
   color: #2c3e50;
   padding: 0 10px;
 }
-.header {
+.logoHeader {
   width: 100%;
   padding: 10px 20px;
   text-align: left;

@@ -33,7 +33,7 @@ specifiers:
   vue-router: ^3.5.1
   vue-template-compiler: ^2.6.14
   vuex: ^3.6.2
-  web-see: ^1.2.0
+  web-see: ^1.2.1
   web-vitals: ^3.1.0
 
 dependencies:
@@ -57,7 +57,7 @@ dependencies:
   vue: 2.7.14
   vue-router: 3.6.5_vue@2.7.14
   vuex: 3.6.2_vue@2.7.14
-  web-see: 1.2.0
+  web-see: 1.2.1
   web-vitals: 3.1.1
 
 devDependencies:
@@ -6891,8 +6891,8 @@ packages:
       defaults: 1.0.4
     dev: true
 
-  /web-see/1.2.0:
-    resolution: {integrity: sha512-U7VE/l21pNN5bR4UyTZQ5THm/qkpVGQVPgqa2oVMZf/Iorzu23kmlLfznCnWuDrGTQW7BKudQQRfPfemIpmyMQ==}
+  /web-see/1.2.1:
+    resolution: {integrity: sha512-7phRkHaad/CjcQesBcKUzWtIjuD+vP9+3ZzOv8gxL7PTZAKuY0q0RwUd4iahKlZ8vDqtVjGkcmxRxGhPy97W8Q==}
     dependencies:
       core-js: 3.28.0
       error-stack-parser: 2.1.4
