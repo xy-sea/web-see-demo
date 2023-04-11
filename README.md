@@ -24,13 +24,13 @@
 ## 安装
 
 ```bash
-$ npm install
+$ pnpm install
 ```
 
 ## 运行
 
 ```
-$ npm run start
+$ pnpm run start
 ```
 
 浏览器输入 http://localhost:8083
