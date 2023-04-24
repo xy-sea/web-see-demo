@@ -10,9 +10,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@websee/core": "^1.1.1",
-    "@websee/performance": "^1.1.1",
-    "@websee/recordscreen": "^1.1.1",
+    "@websee/core": "^3.0.0",
+    "@websee/performance": "^3.0.0",
+    "@websee/recordscreen": "^3.0.0",
     "@zyf2e/monitor-web-performance": "^2.1.54",
     "body-parser": "^1.20.1",
     "co-body": "^6.1.0",
