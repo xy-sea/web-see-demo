@@ -16,6 +16,8 @@ Vue.use(webSee, {
   silentWhiteScreen: true, // 开启白屏检测
   skeletonProject: true, // 项目有骨架屏
   repeatCodeError: true, // 开启错误上报去重
+  silentXhr: false, // 取消监听xhr请求报错
+  silentFetch: false, // 取消监听fetch请求报错
   userId: '123',
   handleHttpStatus(data) {
     let { url, response } = data;
