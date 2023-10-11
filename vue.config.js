@@ -1,6 +1,7 @@
-// const { defineConfig } = require('@vue/cli-service');
-// module.exports = defineConfig({
-module.exports = {
+const { defineConfig } = require('@vue/cli-service');
+const { PerfseePlugin } = require('@perfsee/webpack')
+
+module.exports = defineConfig({
   devServer: {
     proxy: {
       '/getErrorList': {
@@ -19,5 +20,14 @@ module.exports = {
         secure: false
       }
     }
+  },
+  configureWebpack: {
+    plugins: [
+      new PerfseePlugin({
+        project: 'web-see-demo',
+        token: 'uu9jqUfpR9awKYJy1W7/XiuaeF3J0ltNZ8551X0+hBUA=',
+        artifactName: 'main'
+      })
+    ]
   }
-};
+})
