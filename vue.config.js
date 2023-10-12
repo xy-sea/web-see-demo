@@ -1,7 +1,11 @@
 const { defineConfig } = require('@vue/cli-service');
 const { PerfseePlugin } = require('@perfsee/webpack')
 
+const prodDir = 'web-see-demo';
+
 module.exports = defineConfig({
+  publicPath: `/${prodDir}`,
+  outputDir: `${prodDir}`,
   devServer: {
     proxy: {
       '/getErrorList': {
