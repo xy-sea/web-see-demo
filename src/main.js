@@ -10,6 +10,7 @@ import webSee from '@websee/core';
 import performance from '@websee/performance';
 import recordscreen from '@websee/recordscreen';
 
+
 Vue.use(webSee, {
   dsn: 'http://localhost:8083/reportData',
   apikey: 'abcd',
