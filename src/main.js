@@ -10,6 +10,22 @@ import webSee from '@websee/core';
 import performance from '@websee/performance';
 import recordscreen from '@websee/recordscreen';
 
+
+function fnLongTask() {
+  let sum = 0
+  for(let i = 0; i < 100000; i++) {
+    for(let j = 0; j < 10000; j++) {
+      sum = i + j
+    }
+  }
+  return sum
+}
+const startTime = window.performance.now();
+fnLongTask()
+const endTime = window.performance.now();
+const elapsedTime = endTime - startTime;
+console.log(`执行时间：${elapsedTime} 毫秒`);
+
 Vue.use(webSee, {
   dsn: 'http://localhost:8083/reportData',
   apikey: 'abcd',

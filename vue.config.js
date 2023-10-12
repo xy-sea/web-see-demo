@@ -4,7 +4,7 @@ const { PerfseePlugin } = require('@perfsee/webpack')
 // const prodDir = 'web-see-demo';
 
 module.exports = defineConfig({
-  // publicPath: 'dist',
+  publicPath: './',
   // outputDir: `${prodDir}`,
   devServer: {
     proxy: {
